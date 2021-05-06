@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Account.create([
-    {email: "oui@oui.com", lolname: "XxouixX", password: "password1"}
-    {email: "non@non.com", lolname: "XxnonxX", password: "password2"}
+    {email: "oui@oui.com", lolname: "XxouixX", password: "password1"},
+    {email: "non@non.com", lolname: "XxnonxX", password: "password2"},
 
 
 ])

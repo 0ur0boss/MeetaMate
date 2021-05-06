@@ -8,8 +8,16 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+import "./slides.js"
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-require("bootstrap")
+require("bootstrap");
+require("@fortawesome/fontawesome-free");
+
+
+
+
+
