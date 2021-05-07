@@ -10,8 +10,6 @@ import "channels"
 
 import "./slides.js"
 
-import "bootstrap"
-
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
