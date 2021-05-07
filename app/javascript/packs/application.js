@@ -10,12 +10,14 @@ import "channels"
 
 import "./slides.js"
 
+import "bootstrap"
+import "@fortawesome/fontawesome-free"
+
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-require("bootstrap");
-require("@fortawesome/fontawesome-free");
 
 
 
