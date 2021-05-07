@@ -1,5 +1,5 @@
 
-$(function(){
+
 
     var $activeSlide = $('#slides .slide:first-child');
 
@@ -28,4 +28,3 @@ $(function(){
 
     }
 
-});

@@ -7,8 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Account.create([
-    {email: "oui@oui.com", lolname: "XxouixX", password: "password1"},
-    {email: "non@non.com", lolname: "XxnonxX", password: "password2"},
+    {email: "oui@oui.com", lolname: "XxouixX", password: "password"},
+    {email: "non@non.com", lolname: "XxnonxX", password: "password"},
+    {email: "Jonas@gmail.com", lolname: "xXDragonLotusXx", password: "password"},
+    {email: "Thomas@gmail.com", lolname: "HansSamu", password: "password"},
+    {email: "Corentin@gmail.com", lolname: "Overlord 117", password: "password"},
+    {email: "Leo@gmail.com", lolname: "Escle1", password: "password"},
+    {email: "Kevin@gmail.com", lolname: "Jhinvade4min", password: "password"},
 
 
 ])
