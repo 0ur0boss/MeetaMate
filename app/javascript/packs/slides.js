@@ -1,10 +1,12 @@
 
 
+$(document).ready(function() {
 
+    alert('test');
     var $activeSlide = $('#slides .slide:first-child');
 
     // montre le premier slide
-    //$activeSlide.addClass("showing");
+    $activeSlide.addClass("showing");
 
     $("#decline").on("click", function(){
         goToSlide('decline');
@@ -19,12 +21,12 @@
         $activeSlide = $activeSlide.next(".slide");
 
         if(action == "approve"){
-            console.log(action)
+            console.log(action);
         } else {
+            console.log(action);
            
         }
         $activeSlide.addClass("showing");
 
-
     }
-
+});
