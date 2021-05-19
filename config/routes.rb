@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get "/browse" => "browse#browse", as: :browse
 
   root to: "public#home"
+  get "/home" => "public#home", as: :home
+
 
 
 end

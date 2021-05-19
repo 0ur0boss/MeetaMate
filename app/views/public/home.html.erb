@@ -1,22 +1,63 @@
-<div class="container">
-  <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">En plus c’est gratuit !</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">Trouver le mate parfait !</h1>
-        <p>Je vous jure c' est un super site web, vous pouvez rencontrer des mates à pl, qui vous pl, à insulté, bref tout ce qu’un joueurs de lol cherche ! Oui vous êtes désespéré mais tkt on va te trouver un travail. Bien se passer ne t'inquiète pas, ça va bien se passer. Oui j'écrit ce texte car j’aime pas trop le ipsum lorem en texte de remplissage.</p>
+ <% if account_signed_in? %>
+ <div class="container">
+
+
+   <div class="card-deck mb-3 text-center">
+       <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Vous pouvez maintenant crée votre profil !</h4>
+        </div>
+        <div class="card-body">
+          <p>En cliquant sur le lien ci-dessous, vous allez créer une carte qui sera visible de tous les autres utilisateurs, vous pourrez donc être contacté ou contacter vie Meet a Mate ! </p>
+          <%= link_to "Votre carte !", "#", class: "btn btn-lg btn-block btn-primary" %>
+        </div>
       </div>
     </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Inscrivez-vous !</h4>
+
+
+
+    <div class="card-deck mb-3 text-center">
+     <div class="card mb-4 shadow-sm">
+        <h1 class="card-title pricing-card-title">Voici vos futures mates !</h1>
       </div>
+    </div>
+
+
+
+  </div>
+
+<% else %>
+
+  <div class="container row">
+  <div class="col-sm-6 card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm" style="height: 68vh;">
+      <div class="card-header">
+          <h4 class="my-0 font-weight-normal">C’est gratuit !</h4>
+      </div>
+        <img class="card-img-top" src="https://cdn.discordapp.com/attachments/450054113695236097/844620332559761438/katabaka.png" alt="Card image cap" style="weight: 1vh;">
       <div class="card-body">
-        <p>Inscrivez-vous en cliquant sur le bouton ci dessous</p>
-        <%= link_to "Sign up now", new_account_registration_path, class: "btn btn-lg btn-block btn-primary" %>
+        <h1 class="card-title pricing-card-title">Trouver le mate parfait !</h1>
+        <p class="card-text"><p>Sur Meet a Mate vous pouvez créer votre carte de profil publique.
+          Trouvez de nouveau mate, devenez ami et jouez ensemble.
+          En fonction des informations que vous donnerez, vous serez sans doute contacté !
+          Et à l'inverse n'hésitez pas à contacter les joueurs qui vous intéressent !</p></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-6 card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm" style="height: 68vh;">
+      <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Inscrivez-vous !</h4>
+      </div>
+      <img class="card-img-top" src="https://loltracker.com/images/easyblog_images/2638/b2ap3_thumbnail_league_of_legends_fan_art___tahm_kench_retreat___by_benlo-d9ki3br.jpg" alt="Card image cap">
+      <div class="card-body">
+          <p class="align-middle card-text">Inscrivez-vous en cliquant sur le bouton ci dessous</p>
+          <%= link_to "Sign up now", new_account_registration_path, class: "btn btn-lg btn-block btn-primary" %>
       </div>
     </div>
   </div>
 </div>
+
+<% end %>
