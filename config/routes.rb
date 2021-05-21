@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   devise_for :accounts
   #devise_for :users 
   #root "articles#index"
@@ -6,8 +7,10 @@ Rails.application.routes.draw do
 
   get "/browse" => "browse#browse", as: :browse
 
-  root to: "public#home"
-  get "/home" => "public#home", as: :home
+  root to: "posts#index"
+  get "/index" => "posts#index", as: :index
+
+  # get "/post" => "#post", as: :home
 
 
 

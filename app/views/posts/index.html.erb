@@ -1,4 +1,7 @@
- <% if account_signed_in? %>
+
+
+
+<% if account_signed_in? %>
  <div class="container">
 
 
@@ -17,6 +20,39 @@
 
 
 
+
+
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+            <h1 class="card-title pricing-card-title">Voici vos futures mates !</h1>
+          </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 justify-content-center ">
+        <% @posts.each do |post| %>
+            <div class="col-sm-6 card-deck mb-3 text-center">
+              <div class="card mb-4 shadow-sm" style="height: 68vh;">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal"><%= post.game %></h4>
+                </div>
+                  <img src="<%= post.image %>" class="card-img-top img-post" style="max-height: 16em;">
+                  <div class="card-body">
+                    <td><%= post.surname %></td>
+                    <td><%= post.name %></td>
+                    <br>
+                    <td><%= post.discord %></td>
+                    <td><%= post.Pseudo %></td>
+                    <br>
+                    <td><%= post.others %></td>
+                  </div>
+               <%= link_to "Modifié", edit_post_path(post), class: "btn btn-lg btn-block btn-secondary" %> 
+              </div>
+            </div>
+        <% end %>
+      </div>
+
+
+
     
 
 
@@ -25,7 +61,7 @@
 
 <% else %>
 
-<div class="container row">
+  <div class="container row">
   <div class="col-sm-6 card-deck mb-3 text-center">
     <div class="card mb-4 shadow-sm" style="height: 68vh;">
       <div class="card-header">
@@ -51,10 +87,12 @@
       <img class="card-img-top" src="https://loltracker.com/images/easyblog_images/2638/b2ap3_thumbnail_league_of_legends_fan_art___tahm_kench_retreat___by_benlo-d9ki3br.jpg" alt="Card image cap">
       <div class="card-body">
           <p class="align-middle card-text">Inscrivez-vous en cliquant sur le bouton ci dessous</p>
-          <%= link_to "Sign up now", new_account_registration_path, class: "btn btn-lg btn-block btn-primary" %>
+          <%= link_to "Sign up now", new_account_registration_path, class: "btn btn-lg btn-block btn-info" %>
       </div>
     </div>
   </div>
 </div>
 
 <% end %>
+
+
